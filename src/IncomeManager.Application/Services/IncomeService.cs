@@ -3,9 +3,9 @@ using IncomeManager.Domain.Entities;
 
 namespace IncomeManager.Application.Services;
 
-public class IncomeService
+public class IncomeService : IIncomeService
 {
-    private static readonly List<Income> _incomes = [];
+    private readonly List<Income> _incomes = [];
 
     public Income Create(CreateIncomeDto dto)
     {

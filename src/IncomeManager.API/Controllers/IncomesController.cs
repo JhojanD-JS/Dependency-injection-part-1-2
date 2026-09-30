@@ -8,11 +8,13 @@ namespace IncomeManager.API.Controllers;
 [ApiController]
 public class IncomesController : ControllerBase
 {
-    private readonly IncomeService _incomeService;
+  
+    private readonly IIncomeService _incomeService;
 
-    public IncomesController()
+
+    public IncomesController(IIncomeService incomeService)
     {
-        _incomeService = new IncomeService();
+        _incomeService = incomeService;
     }
 
     [HttpPost]
